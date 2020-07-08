@@ -287,7 +287,7 @@ class HandlerClass:
     def upgrade_check(self):
         with open(self.configFile, 'r') as f_in:
             for line in f_in:
-                if line.startswith('version=0.1'):
+                if line.startswith('version='):
                     return
                 elif line.startswith('arc-fail-delay'):
                     break
@@ -321,7 +321,7 @@ class HandlerClass:
 
     def __init__(self, halcomp,builder,useropts):
 
-        self.plasmacVersion = 'PlasmaC v0.138'
+        self.plasmacVersion = 'PlasmaC v0.141'
 
         self.halcomp = halcomp
         self.builder = builder
